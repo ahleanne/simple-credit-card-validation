@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>   
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/0ac371c48a.js" crossorigin="anonymous"></script>
+    <title>Payment Validation</title>
+</head>
+<body>
+    <section>
+        <div class="title">
+            <div>
+                <h2>Enter Payment Details</h2>
+            </div>
+            <div>
+                <h2>Summary</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="content">
+            <div class="tickets">
+                <div class="payment">
+                     <form id="form" action="" method="post">
+                        <div class="first">
+                            <div>
+                                <label for="name">Cardholder Name</label>&nbsp;<span id="error-name"></span><br>
+                                <input type="text" name="name" placeholder="Enter cardholder name" id="name" required>
+                            </div>
+                            <div>
+                                <label for="num">Card Number<i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></label><span id="error-num"></span><br>
+                                <input type="number" name="num" placeholder="Enter card number"  id="num" required>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="exp-opt">
+                                <label for="exp">Valid Until</label>
+                                <select name="month">
+                                    <option value="01">Jan</option>
+                                    <option value="02">Feb </option>
+                                    <option value="03">Mar</option>
+                                    <option value="04">Apr</option>
+                                    <option value="05">May</option>
+                                    <option value="06">June</option>
+                                    <option value="07">July</option>
+                                    <option value="08">Aug</option>
+                                    <option value="09">Sept</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                <select name="year">
+                                    <option value="22"> 22</option>
+                                    <option value="23"> 23</option>
+                                    <option value="24"> 24</option>
+                                    <option value="25"> 25</option>
+                                    <option value="26"> 26</option>
+                                    <option value="27"> 27</option>
+                                </select>    
+                            </div>
+                        </div>
+                        <div class=code>
+                            <label for="code">CVV</label>
+                            <input type="number" name="code" placeholder="CVV" id="cvv-code" required>
+                            <span id="error-cvv"></span>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" value="Pay Now" name="pay">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="summary">
+                <div>
+                    <p>Subtotal: RM 900</p>
+                    <p>Service Charge: 10%</p>
+                </div>
+                <div>
+                    <hr>
+                    <p>TOTAL: <b>RM 990<b></p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
