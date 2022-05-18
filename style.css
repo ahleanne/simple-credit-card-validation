@@ -16,7 +16,16 @@ body {
 .title {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+}
+
+.title div:first-child {
+    width: 60%;
+    text-align: center;
+}
+
+.title div:last-child {
+    width: 40%;
+    text-align: center;
 }
 
 .content {
@@ -26,12 +35,12 @@ body {
 }
 
 .tickets {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .summary {
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
 }
 
